@@ -114,7 +114,109 @@
                 <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" alt="Shop B">
                 <div class="item-title">GreenLeaf</div>
                 <div class="item-title">Sona Masoori Rice (5kg)</div>
-                <div class="item-price">₹315</div>
+                <div class="item-price">₹315</div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FreshEats - Online Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #fff7e6; color: #222; }
+        header { background: linear-gradient(90deg, #fd8904 0%, #fd574a 100%); color: #fff; padding: 30px 18px; text-align: center; }
+        h1 { margin: 0; font-size: 2.3em; }
+        nav { margin-top: 20px; }
+        nav a { color: #fff; text-decoration: none; font-size: 1.1em; margin: 0 15px; }
+        .container { max-width: 450px; margin: 30px auto; background: #fff; border-radius: 17px; box-shadow: 0 2px 12px #fcdda6; padding: 32px 18px; }
+        .form-group { margin-bottom: 20px; }
+        input, select { width: 100%; padding: 12px; font-size: 1.05em; margin-top: 5px; box-sizing: border-box; border-radius: 7px; border: 1.2px solid #fdc680; }
+        label { font-weight: bold; margin-bottom: 8px; display: block; }
+        table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+        th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #fae3c7; }
+        th { background-color: #fde1b4; font-size: 1.1em; }
+        .order-btn { background: linear-gradient(90deg, #fd8904 0%, #fd574a 100%); color: #fff; border: none; border-radius: 7px; font-size: 1.1em; padding: 13px 0; width: 100%; cursor: pointer; margin-top: 26px;}
+        .order-btn:hover { opacity: 0.9;}
+        footer { background: #fd8904; color: #fff; text-align: center; padding: 15px; margin-top: 30px; border-radius:0 0 12px 12px;}
+    </style>
+    <script>
+        function sendOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const cheeseBurger = document.getElementById('cheeseBurger').value;
+            const vegPizza = document.getElementById('vegPizza').value;
+            const biryani = document.getElementById('biryani').value;
+            const otherItems = document.getElementById('otherItems').value;
+            const address = document.getElementById('address').value;
+
+            let orderSummary = `Order Details:\n`;
+            orderSummary += `Name: ${name}\nPhone: ${phone}\n`;
+            orderSummary += `Cheese Burger: ${cheeseBurger}\n`;
+            orderSummary += `Veg Pizza: ${vegPizza}\n`;
+            orderSummary += `Hyderabadi Biryani: ${biryani}\n`;
+            orderSummary += `Other Items: ${otherItems}\n`;
+            orderSummary += `Delivery Address: ${address}`;
+
+            // WhatsApp number (with country code)
+            const phoneNumber = "918977143043";
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(orderSummary)}`, "_blank");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>FreshEats</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Order</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <form onsubmit="sendOrder(event)">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <h2 style="text-align:center;">Select Items</h2>
+            <table>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Cheese Burger</td>
+                    <td><input type="number" id="cheeseBurger" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Veg Pizza</td>
+                    <td><input type="number" id="vegPizza" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Hyderabadi Biryani</td>
+                    <td><input type="number" id="biryani" min="0" value="0"></td>
+                </tr>
+            </table>
+            <div class="form-group">
+                <label for="otherItems">Other Items (Coke, Fries, etc.)</label>
+                <input type="text" id="otherItems">
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <input type="text" id="address" required>
+            </div>
+            <button class="order-btn" type="submit">Order Now via WhatsApp</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2025 FreshEats. All rights reserved.
+    </footer>
+</body>
+</html>
                 <button class="order-btn" onclick="orderOnWhatsApp('Sona Masoori Rice 5kg','shop','GreenLeaf','₹315')">Order via WhatsApp</button>
             </div>
             <div class="shop">
