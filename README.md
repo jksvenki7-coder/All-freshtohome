@@ -5,7 +5,8 @@
     <div>
       <img src="02fcaa6a-5839-404f-98e1-ba7b69a8231a.jpg" alt="Product 1" style="width:100px;height:100px;">
       <p>Product Name 1</p>
-    </div>
+    </div><img width="1280" height="1280" alt="image" src="https://github.com/user-attachments/assets/5e8106b8-79bb-48f1-9397-f9ec4ae36f86" />
+
     <div><img width="851" height="1280" alt="image" src="https://github.com/user-attachments/assets/06b91a1e-4520-410e-bd18-e7f4cf4db296" />
 
       <img src="9316ffe4-0dc2-4822-85ba-c29874da9a12.jpg" alt="Product 2" style="width:100px;height:100px;">
